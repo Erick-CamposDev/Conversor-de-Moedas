@@ -1,0 +1,74 @@
+:root {
+  --bg-color: #1b3b5f;
+  --card-color: #3e6fa6;
+  --txt-color: #e5e5e5;
+  --btn-color: #4caf50;
+  --extra-color: #ffc107;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: var(--txt-color);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-color);
+  width: 40%;
+  height: 450px;
+  border-radius: 14px;
+  box-shadow: 6px 6px 12px #00000077;
+}
+
+.card-title {
+  margin: 2rem;
+  font-size: 13px;
+  color: var(--txt-color);
+}
+
+.card-title > h2 {
+  font-weight: 700;
+}
+
+.money-input {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.money-label {
+  margin: 0 0 0.2rem 0.75rem;
+  font-weight: 700;
+  color: var(--txt-color);
+  font-size: 17px;
+}
+
+.money-input > input {
+  width: 80%;
+  height: 50px;
+  padding: 1rem;
+  border-radius: 24px;
+  border: 2px solid #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+}
+
+#moneyInput:focus {
+  outline: none;
+  border: 2px solid #00aad4;
+}

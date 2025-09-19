@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Erick Campos" />
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="src/assets/styles/reset.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/assets/styles/style.css" />
+    <link rel="stylesheet" href="src/assets/styles/fonts.css" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Conversor de Moedas</title>
+  </head>
+  <body>
+    <header>
+      <div class="main-title">
+        <h1>CONVERSOR DE MOEDAS</h1>
+      </div>
+    </header>
+    <main>
+      <section class="card">
+        <div class="card-title"><h2>Selecione as moedas</h2></div>
+        <div class="money-input">
+          <label class="money-label" for="moneyInput">Dinheiro: </label>
+          <input
+            placeholder="Digite a quantia"
+            type="number"
+            name="moneyNumber"
+            id="moneyInput"
+            min="0"
+          />
+        </div>
+        <div class="countries-select">
+          <select name="country" id="countrySelect"></select>
+        </div>
+      </section>
+    </main>
+    <script src="src/assets/js/script.js"></script>
+  </body>
+</html>
