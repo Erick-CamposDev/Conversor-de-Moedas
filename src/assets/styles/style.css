@@ -26,10 +26,15 @@ main {
   justify-content: center;
 }
 
+h2 > i {
+  margin-left: 0.2rem;
+  font-size: 25px;
+}
+
 .card {
   background: var(--card-color);
   width: 40%;
-  height: 450px;
+  height: 475px;
   border-radius: 14px;
   box-shadow: 6px 6px 12px #00000077;
 }
@@ -71,4 +76,118 @@ main {
 #moneyInput:focus {
   outline: none;
   border: 2px solid #00aad4;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.countries-select select {
+  width: 100%;
+  border-radius: 16px;
+  background-color: #000;
+  color: var(--txt-color);
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  height: 60px;
+}
+
+.countries-select select option {
+  border-radius: 50px;
+  background: #000000;
+  color: var(--txt-color);
+}
+
+.countries-select select:focus {
+  outline: none;
+  border: 1px solid #00aad4;
+}
+
+.arrows {
+  font-size: 30px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+#convertBtn {
+  background: var(--btn-color);
+  color: var(--txt-color);
+  width: 150px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+#convertBtn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.12);
+}
+
+#convertBtn:active {
+  opacity: 0.7;
+}
+
+#resultContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+#resultContainer p {
+  background: var(--extra-color);
+  padding: 1rem 1rem 1rem 1rem;
+  border: 1px solid #00000077;
+  border-radius: 16px;
+  box-shadow: 6px 6px 12px #00000077;
+}
+
+@media (min-width: 280px) and (max-width: 420px) {
+  .card {
+    width: 85%;
+  }
+
+  .select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .countries-select select {
+    width: 80%;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 768px) {
+  .card {
+    width: 60%;
+  }
+
+  .countries-select select {
+    width: 80%;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .countries-select select {
+    width: 80%;
+    margin-left: 1rem;
+  }
 }

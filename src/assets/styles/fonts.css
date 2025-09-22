@@ -20,3 +20,19 @@ label {
   font-family: "Montserrat";
   font-weight: 400;
 }
+
+.countries-select select {
+  font-family: "Montserrat";
+}
+
+.countries-select select option {
+  font-family: "Montserrat";
+}
+
+#convertBtn {
+  font-family: "Inter";
+}
+
+#resultContainer {
+  font-family: "Inter";
+}
