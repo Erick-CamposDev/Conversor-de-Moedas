@@ -34,7 +34,7 @@ h2 > i {
 .card {
   background: var(--card-color);
   width: 40%;
-  height: 475px;
+  height: 500px;
   border-radius: 14px;
   box-shadow: 6px 6px 12px #00000077;
 }
@@ -117,16 +117,22 @@ h2 > i {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
+  margin: 2rem 2rem 1rem;
 }
 
 #convertBtn {
-  background: var(--btn-color);
+  background: linear-gradient(
+    to right,
+    var(--btn-color) 25%,
+    #019e23 50%,
+    #027e1d 75%,
+    #194201 100%
+  );
   color: var(--txt-color);
-  width: 150px;
+  width: 175px;
   height: 60px;
   border: 2px solid #000;
-  border-radius: 20px;
+  border-radius: 24px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease-in;
@@ -154,7 +160,41 @@ h2 > i {
   padding: 1rem 1rem 1rem 1rem;
   border: 1px solid #00000077;
   border-radius: 16px;
+  font-size: 14px;
   box-shadow: 6px 6px 12px #00000077;
+}
+
+.spinner {
+  border: 2px solid #e5e5e5;
+  border-top: 2px solid #00aad4;
+  height: 30px;
+  width: 30px;
+  margin: 0.35rem auto;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.blinking {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #000000;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 280px) and (max-width: 420px) {
