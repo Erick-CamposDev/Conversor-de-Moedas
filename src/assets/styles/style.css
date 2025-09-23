@@ -34,9 +34,10 @@ h2 > i {
 .card {
   background: var(--card-color);
   width: 40%;
-  height: 500px;
+  height: auto;
   border-radius: 14px;
   box-shadow: 6px 6px 12px #00000077;
+  padding-bottom: 1.5rem;
 }
 
 .card-title {
@@ -141,6 +142,7 @@ h2 > i {
 #convertBtn:hover {
   transform: scale(1.05);
   filter: brightness(1.12);
+  box-shadow: 4px 4px 14px #000;
 }
 
 #convertBtn:active {
@@ -158,10 +160,14 @@ h2 > i {
 #resultContainer p {
   background: var(--extra-color);
   padding: 1rem 1rem 1rem 1rem;
-  border: 1px solid #00000077;
+  border: 1px solid #000000;
   border-radius: 16px;
   font-size: 14px;
   box-shadow: 6px 6px 12px #00000077;
+}
+
+.loading-container {
+  display: none;
 }
 
 .spinner {
@@ -169,16 +175,17 @@ h2 > i {
   border-top: 2px solid #00aad4;
   height: 30px;
   width: 30px;
-  margin: 0.35rem auto;
+  margin: 0.65rem auto;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
+  padding: 0;
 }
 
 .blinking {
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid #000000;
-  animation: blink 1s step-end infinite;
+  border: 2px solid #000000;
+  animation: blink 1s ease-in infinite;
 }
 
 @keyframes blink {
