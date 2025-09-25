@@ -34,7 +34,7 @@ h2 > i {
 
 .card {
   background: var(--card-color);
-  width: 40%;
+  width: 50%;
   height: auto;
   border-radius: 14px;
   box-shadow: 6px 6px 12px #00000077;
