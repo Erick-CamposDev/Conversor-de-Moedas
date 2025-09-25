@@ -1,3 +1,4 @@
+//CONSTANTES DE OBJETOS DOM
 const loading = document.querySelector(".loading-container");
 const convertBtn = document.getElementById("convertBtn");
 const message = loading.querySelector(".blinking");
@@ -6,8 +7,10 @@ const moneyInput = document.getElementById("moneyInput");
 const finalResult = document.getElementById("result");
 const countrySelect = document.querySelectorAll(".country-select");
 
+//URL DA API
 const apiUrl = "https://api.exchangerate-api.com/v4/latest/USD";
 
+//OBJETO COM TODOS OS NOMES DAS MOEDAS RETIRADAS DO FETCH
 const moneyCountryNames = {
   AED: "Dirham dos Emirados",
   AFN: "Afegane Afegão",
@@ -178,10 +181,12 @@ convertBtn.addEventListener("click", () => {
   convertMoney();
 });
 
+//FUNÇÃO PARA O LOADING ANTES DE BUSCAR DADOS DA API
 function loadingConvert() {
   loading.style.display = "block";
 }
 
+//FUNÇÃO ASSINCRONA QUE PREENCHE AS OPÇÕES DO SELECT
 async function fillOptions() {
   try {
     const response = await fetch(apiUrl);
@@ -213,6 +218,7 @@ async function fillOptions() {
 
 fillOptions();
 
+//FUNÇÃO ASSINCRONA PARA CONVERSÃO DE MOEDAS
 async function convertMoney() {
   finalResult.style.color = "#000000";
   finalResult.innerHTML = "";
