@@ -207,7 +207,8 @@ h2 > i {
 
 @media (min-width: 280px) and (max-width: 420px) {
   .card {
-    width: 85%;
+    width: 90%;
+    padding: 0 1rem 1rem;
   }
 
   .select-container {
@@ -224,7 +225,8 @@ h2 > i {
 
 @media (min-width: 420px) and (max-width: 768px) {
   .card {
-    width: 60%;
+    width: 85%;
+    padding: 0 2rem 2rem;
   }
 
   .countries-select select {
@@ -237,5 +239,9 @@ h2 > i {
   .countries-select select {
     width: 80%;
     margin-left: 1rem;
+  }
+
+  .card {
+    padding: 0 2rem 2rem;
   }
 }
