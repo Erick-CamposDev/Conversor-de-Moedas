@@ -211,7 +211,7 @@ h2 > i {
 
   color: var(--txt-color);
 
-  width: 250px;
+  width: 65%;
 }
 
 #result div p:nth-child(2) {
@@ -223,7 +223,7 @@ h2 > i {
     var(--extra-color) 100%
   );
 
-  width: 250px;
+  width: 65%;
 
   color: var(--txt-color);
 }
