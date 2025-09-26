@@ -100,7 +100,7 @@ h2 > i {
 }
 
 .countries-select select {
-  width: 95%;
+  width: 100%;
   border-radius: 16px;
   background-color: #000;
   color: var(--txt-color);
@@ -183,6 +183,41 @@ h2 > i {
   box-shadow: 6px 6px 12px #00000077;
 }
 
+#result div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+#result div p:nth-child(1) {
+  background: linear-gradient(
+    to right,
+    #00aad4 25%,
+    #038eb1 50%,
+    #026983 75%,
+    #1b3b5f 100%
+  );
+
+  color: var(--txt-color);
+
+  width: 250px;
+}
+
+#result div p:nth-child(2) {
+  background: linear-gradient(
+    to right,
+    #ff91008f 25%,
+    #ffc400ab 50%,
+    #ffd900b2 75%,
+    var(--extra-color) 100%
+  );
+
+  width: 250px;
+
+  color: var(--txt-color);
+}
+
 .loading-container {
   display: none;
 }
@@ -235,6 +270,11 @@ h2 > i {
 
   .countries-select select {
     width: 80%;
+  }
+
+  #result div p:nth-child(1),
+  #result div p:nth-child(2) {
+    width: 180px;
   }
 }
 
