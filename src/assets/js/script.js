@@ -1,5 +1,6 @@
 //CONSTANTES DE OBJETOS DOM
 const loading = document.querySelector(".loading-container");
+const exchangeBtn = document.getElementById("exchangeBtn");
 const convertBtn = document.getElementById("convertBtn");
 const message = loading.querySelector(".blinking");
 const spinner = loading.querySelector(".spinner");
@@ -33,14 +34,26 @@ function loadingConvert() {
   loading.style.display = "block";
 }
 
+//FUNÇÃO PARA TROCAR DE PAÍSES NO SELECT
+function exchangeCountries() {
+  if (
+    countrySelect.value === "" ||
+    countrySelect[0].value === "" ||
+    countrySelect[1].value === ""
+  ) {
+    finalResult.innerHTML = "País não selecionado!";
+    finalResult.style.color = "#ff0000";
+    return;
+  } else {
+    const firstSelected = countrySelect[0].value;
+    countrySelect[0].value = countrySelect[1].value;
+    countrySelect[1].value = firstSelected;
+  }
+}
+
 //FUNÇÃO ASSINCRONA QUE PREENCHE AS OPÇÕES DO SELECT
 async function fillOptions() {
   try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-
-    let rates = data.rates;
-
     countrySelect.forEach((select) => {
       let countriesArray = Object.keys(moneyCountryNames);
 
