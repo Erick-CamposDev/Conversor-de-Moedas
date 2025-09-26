@@ -21,6 +21,10 @@ label {
   font-weight: 400;
 }
 
+.countries-select label {
+  font-family: "Montserrat";
+}
+
 .countries-select select {
   font-family: "Montserrat";
 }
