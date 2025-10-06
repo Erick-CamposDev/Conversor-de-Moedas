@@ -7,7 +7,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 115vh;
   background-color: var(--bg-color);
   margin-bottom: 80px;
 }
@@ -248,6 +248,17 @@ h2 > i {
   white-space: nowrap;
   border: 2px solid #000000;
   animation: blink 1s ease-in infinite;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-style: italic;
+  margin: 2rem 0;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 @keyframes blink {
